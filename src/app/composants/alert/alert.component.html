@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="alert alter-{{alert.importance}}" 
+  *ngFor="let alert of alerts" >
+    {{alert.message}}
+    <a class="close" (click)="deleteAlert(alert.message, alert.importance)">&times;</a>
+  </div>
+</div>
