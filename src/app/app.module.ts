@@ -11,11 +11,12 @@ import { AlertComponent } from './composants/alert/alert.component';
 import { TodolistComponent } from './composants/todolist/todolist.component';
 import { ResultComponent } from './result/result.component';
 
-
+import {AuthGuard} from './auth.guard'
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path:'result', component: ResultComponent},
+  { path:'result',  component: ResultComponent, canActivate: [AuthGuard]},
+  { path: 'todo_en', component: TodolistComponent, data: [{lang: 'en'}]},
   { path: '', component: TodolistComponent},
   { path: '**', component: TodolistComponent}
 ];
@@ -33,12 +34,13 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(
       appRoutes,
-      {enableTracing: true}
+      {enableTracing: false}
     ),
     FormsModule
   ],
   providers: [
     AlertsService,
+    AuthGuard,
   ],
   bootstrap: [AppComponent]
 })
