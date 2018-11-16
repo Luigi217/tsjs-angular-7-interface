@@ -9,6 +9,16 @@ import {AlertsService} from './services/alerts.service';
 
 import { AlertComponent } from './composants/alert/alert.component';
 import { TodolistComponent } from './composants/todolist/todolist.component';
+import { ResultComponent } from './result/result.component';
+
+
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path:'result', component: ResultComponent},
+  { path: '', component: TodolistComponent},
+  { path: '**', component: TodolistComponent}
+];
 
 @NgModule({
   declarations: [
@@ -17,9 +27,14 @@ import { TodolistComponent } from './composants/todolist/todolist.component';
     TranslatePipe,
     AlertComponent,
     TodolistComponent,
+    ResultComponent,
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(
+      appRoutes,
+      {enableTracing: true}
+    ),
     FormsModule
   ],
   providers: [
