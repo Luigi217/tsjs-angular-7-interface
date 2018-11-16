@@ -1,0 +1,10 @@
+
+<input type="text" [(ngModel)] = 'fruit' placeholder="Add">
+<input type="text" [(ngModel)] = 'searchQuery' placeholder="search">
+<button  (click)='addFruit(fruit)'>{{'KEY_SAVE' | translate: lang}}</button>
+
+<ul>
+    <li *ngFor='let fruit of fruits | filter: searchQuery; let i = index'>
+        <span (click)='deleteFruit(i)'>{{fruit}} - {{i}} </span>
+      </li>
+</ul>

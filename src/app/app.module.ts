@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 
 import { FilterPipe } from './pipes/filter.pipe';
 import { TranslatePipe } from './pipes/translate.pipe';
-import { AlertComponent } from './composants/alert/alert.component';
-
 import {AlertsService} from './services/alerts.service';
+
+import { AlertComponent } from './composants/alert/alert.component';
+import { TodolistComponent } from './composants/todolist/todolist.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {AlertsService} from './services/alerts.service';
     FilterPipe,
     TranslatePipe,
     AlertComponent,
+    TodolistComponent,
   ],
   imports: [
     BrowserModule,
