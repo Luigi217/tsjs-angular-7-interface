@@ -12,4 +12,13 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  login(username, password) {
+    if (username === 'esme' && password === 'esme') {
+      localStorage.setItem('logged', String(true));
+    } else {
+
+    }
+    console.log('logged ? =' + localStorage.getItem('logged'));
+  }
+
 }

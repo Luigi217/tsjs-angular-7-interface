@@ -1,0 +1,15 @@
+<!--<p>-->
+  <!--result works!-->
+<!--</p>-->
+<app-logout></app-logout>
+
+<label for="username"><b>Username</b></label>
+<input type="text" [(ngModel)] = 'username_input' placeholder="Enter Username" id="username" required>
+
+<label for="psw"><b>Password</b></label>
+<input type="password" [(ngModel)] = 'password_input' placeholder="Enter Password" id="psw" required>
+
+<button  (click)='test(username_input,password_input)'>test</button>
+
+<a class="nav-link" routerLink="/result" routerLinkActive="active"> go to result </a>
+<a class="nav-link" routerLink="" routerLinkActive="active"> go to todo </a>

@@ -9,7 +9,7 @@ import {AlertsService} from './services/alerts.service';
 
 import { AlertComponent } from './composants/alert/alert.component';
 import { TodolistComponent } from './composants/todolist/todolist.component';
-import { ResultComponent } from './result/result.component';
+import { ResultComponent } from './composants/result/result.component';
 
 import {AuthGuard} from './auth.guard';
 import { RouterModule, Routes } from '@angular/router';
@@ -17,17 +17,18 @@ import { LoginComponent } from './composants/login/login.component';
 import { StatComponent } from './composants/stat/stat.component';
 import { MnistComponent } from './composants/mnist/mnist.component';
 import { HomeComponent } from './composants/home/home.component';
+import { LogoutComponent } from './composants/logout/logout.component';
 
 const appRoutes: Routes = [
-/*
+
   { path: 'result',  component: ResultComponent, canActivate: [AuthGuard]},
-  { path: 'todo_en', component: TodolistComponent, data: [{lang: 'en'}]},
+  /*{ path: 'todo_en', component: TodolistComponent, data: [{lang: 'en'}]},
   { path: '', component: TodolistComponent},
   { path: '**', component: TodolistComponent}
   { path: 'toto', component: TodolistComponent},
 */
-  { path: '', component: HomeComponent},
-  { path: 'stat', component: StatComponent},
+  { path: '', component: LoginComponent}, // home
+  { path: 'stat', component: StatComponent, canActivate: [AuthGuard]},
   { path: 'login', component: LoginComponent},
   { path: 'MNIST', component: MnistComponent},
 ];
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
     StatComponent,
     MnistComponent,
     HomeComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,

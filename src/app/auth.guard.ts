@@ -5,7 +5,13 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthGuard implements CanActivate {
     canActivate() {
-        console.log('Ok');
-        return false;
+        console.log('logged ? =' + localStorage.getItem('logged'));
+        if ( localStorage.getItem('logged') === 'true') {
+          console.log('access granted');
+          return true;
+        } else {
+          console.log('access denied');
+          return false;
+        }
     }
 }

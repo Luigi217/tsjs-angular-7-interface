@@ -1,30 +1,30 @@
-<p>
-  login works!
-</p>
+<!--<p>-->
+  <!--login works!-->
+<!--</p>-->
 
 <!--<input type="text" [(ngModel)] = 'username' placeholder="username">
 <input type="text" [(ngModel)] = 'password' placeholder="password">
 <button click>"Go!"</button>-->
 
-<form>
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+<div class="container">
+  <label for="username"><b>Username</b></label>
+  <input type="text" [(ngModel)] = 'username_input' placeholder="Enter Username" id="username" required>
 
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
+  <label for="psw"><b>Password</b></label>
+  <input type="password" [(ngModel)] = 'password_input' placeholder="Enter Password" id="psw" required>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
+  <button type="submit" (click)='login(username_input,password_input)' >Login</button>
+  <label>
+    <input type="checkbox" checked="checked" name="remember"> Remember me
+  </label>
+</div>
+
+<div class="container" style="background-color:#f1f1f1">
+  <button type="button" class="cancelbtn">Cancel</button>
+  <span class="psw">Forgot <a href="#">password?</a></span>
+</div>
+
 
 <!--<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"> </script>-->
 
