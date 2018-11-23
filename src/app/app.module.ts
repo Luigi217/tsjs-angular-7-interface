@@ -23,6 +23,7 @@ const appRoutes: Routes = [
   { path: '**', component: TodolistComponent}
 */
   { path: '', component: LoginComponent},
+  { path: 'toto', component: TodolistComponent},
 ];
 
 @NgModule({
