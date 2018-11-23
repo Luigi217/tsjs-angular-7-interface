@@ -14,6 +14,9 @@ import { ResultComponent } from './result/result.component';
 import {AuthGuard} from './auth.guard';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './composants/login/login.component';
+import { StatComponent } from './composants/stat/stat.component';
+import { MnistComponent } from './composants/mnist/mnist.component';
+import { HomeComponent } from './composants/home/home.component';
 
 const appRoutes: Routes = [
 /*
@@ -23,10 +26,10 @@ const appRoutes: Routes = [
   { path: '**', component: TodolistComponent}
   { path: 'toto', component: TodolistComponent},
 */
-  { path: '', component: LoginComponent}, // home
-  { path: 'stat', component: TodolistComponent},
+  { path: '', component: HomeComponent},
+  { path: 'stat', component: StatComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'MNIST', component: TodolistComponent},
+  { path: 'MNIST', component: MnistComponent},
 ];
 
 @NgModule({
@@ -38,6 +41,9 @@ const appRoutes: Routes = [
     TodolistComponent,
     ResultComponent,
     LoginComponent,
+    StatComponent,
+    MnistComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
