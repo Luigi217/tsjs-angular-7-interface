@@ -15,7 +15,7 @@ import {AuthGuard} from './auth.guard'
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path:'result',  component: ResultComponent, canActivate: [AuthGuard]},
+  { path: 'result',  component: ResultComponent, canActivate: [AuthGuard]},
   { path: 'todo_en', component: TodolistComponent, data: [{lang: 'en'}]},
   { path: '', component: TodolistComponent},
   { path: '**', component: TodolistComponent}
