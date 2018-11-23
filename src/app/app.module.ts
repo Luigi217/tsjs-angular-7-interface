@@ -21,9 +21,12 @@ const appRoutes: Routes = [
   { path: 'todo_en', component: TodolistComponent, data: [{lang: 'en'}]},
   { path: '', component: TodolistComponent},
   { path: '**', component: TodolistComponent}
-*/
-  { path: '', component: LoginComponent},
   { path: 'toto', component: TodolistComponent},
+*/
+  { path: '', component: LoginComponent}, // home
+  { path: 'stat', component: TodolistComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'MNIST', component: TodolistComponent},
 ];
 
 @NgModule({
