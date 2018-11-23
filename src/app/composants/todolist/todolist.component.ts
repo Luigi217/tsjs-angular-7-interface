@@ -8,12 +8,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./todolist.component.css']
 })
 export class TodolistComponent {
-  
+
   fruits = ['b', 'a']
   public lang = 'fr';
-  
+
   constructor(private alertsService: AlertsService, route: ActivatedRoute) {
-    console.log(route.snapshot.data[0]['lang']);
   }
 
   addFruit(fruit) {
