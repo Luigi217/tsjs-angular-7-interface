@@ -16,8 +16,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './composants/login/login.component';
 import { StatComponent } from './composants/stat/stat.component';
 import { MnistComponent } from './composants/mnist/mnist.component';
+import { ChartComponent } from './composants/mnist/chart/chart.component'
 import { HomeComponent } from './composants/home/home.component';
 import { LogoutComponent } from './composants/logout/logout.component';
+
+
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+
+import { DrawableDirective } from './composants/mnist/drawable.directive';
+
 
 const appRoutes: Routes = [
 
@@ -46,6 +53,9 @@ const appRoutes: Routes = [
     MnistComponent,
     HomeComponent,
     LogoutComponent,
+
+    ChartComponent,
+    DrawableDirective,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +63,8 @@ const appRoutes: Routes = [
       appRoutes,
       {enableTracing: false}
     ),
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [
     AlertsService,
